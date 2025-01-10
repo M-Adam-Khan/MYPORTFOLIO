@@ -414,3 +414,97 @@ footer {
     margin-top: 15px;
     font-size: 14px;
 }
+#about {
+    background-color: #121212;  /* Dark background */
+    color: #f5f5f5;  /* Light text color */
+    padding: 40px 30px;  /* Reduced padding for a more compact layout */
+    border-radius: 12px;  /* Rounded corners for a smooth look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);  /* Slight shadow for depth */
+    margin: 50px auto;  /* Center the section */
+    max-width: 1200px;  /* Maximum width for readability */
+    font-family: 'Montserrat', sans-serif;  /* Clean, modern font */
+    line-height: 1.6;  /* Slightly larger line height for readability */
+    display: flex;  /* Flexbox for the layout */
+    justify-content: space-between;  /* Space out the content */
+    align-items: center;  /* Align content vertically */
+}
+
+#about .about-content {
+    display: flex;  /* Flexbox for the content */
+    align-items: center;  /* Align items vertically in the container */
+    width: 100%;
+}
+
+#about .about-text {
+    flex: 1;  /* Make text section take up remaining space */
+    padding-right: 30px;  /* Padding between text and image */
+}
+
+#about h1 {
+    text-align: left;  /* Align the heading to the left */
+    color: #32CD32;  /* Green color for the heading */
+    font-size: 2.5rem;  /* Adjusted font size for the heading */
+    margin-bottom: 20px;  /* Reduced space between heading and text */
+    text-transform: uppercase;  /* Uppercase style for emphasis */
+    letter-spacing: 1px;  /* Small letter-spacing for elegance */
+}
+
+#about p {
+    font-size: 1rem;  /* Smaller font size for a shorter, easier-to-read paragraph */
+    margin-bottom: 15px;  /* Space between paragraphs */
+    text-align: justify;  /* Justified text for a neat appearance */
+    text-indent: 20px;  /* Indentation for paragraphs */
+    opacity: 0.9;  /* Slight transparency for a smooth effect */
+    transition: opacity 0.3s ease-in-out;  /* Smooth transition on hover */
+    font-style: italic;  /* Italic style for the text */
+}
+
+#about p:hover {
+    opacity: 1;  /* Full opacity on hover for emphasis */
+}
+
+#about .about-image {
+    flex-shrink: 0;  /* Prevent the image from shrinking */
+    width: 250px;  /* Fixed width for the image */
+    height: 250px;  /* Fixed height for the image */
+    border-radius: 50%;  /* Circular image */
+    overflow: hidden;  /* Hide the overflow of the image */
+    border: 5px solid #32CD32;  /* Border around the image to match the theme */
+}
+
+#about .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure the image covers the circle */
+}
+
+#about p:hover {
+    opacity: 1;  /* Full opacity on hover for emphasis */
+}
+
+#about:hover {
+    transform: translateY(-5px);  /* Slight lift effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;  /* Stack the sections vertically on smaller screens */
+        padding: 30px 20px;  /* Adjust padding for smaller screens */
+    }
+
+    #about h1 {
+        font-size: 2rem;  /* Slightly smaller heading on mobile */
+    }
+
+    #about p {
+        font-size: 0.95rem;  /* Smaller text size for mobile devices */
+    }
+
+    #about .about-image {
+        margin-top: 20px;  /* Add space between text and image on mobile */
+    }
+}
+
+
