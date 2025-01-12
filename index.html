@@ -87,40 +87,50 @@
     
     
     <div class="gradient-line"></div>
-    <!-- Blog Section -->
     <section id="blogs">
         <div class="main-container">
             <h1 data-aos="fade-left" data-aos-duration="1500">Blog</h1>
-            <div class="blog-grid">
-                <!-- Example Blog Post 1 -->
+            <div class="blog-grid" id="blog-container">
+                <!-- Blog Post 1 -->
                 <div class="blog-item" data-aos="fade-up" data-aos-duration="1500">
                     <img src="blog1.jpg" alt="Blog Image">
                     <div class="blog-content">
                         <h2>"Machine Learning 101: Types, Applications, and Future Impact of AI in Technology"</h2>
                         <p>"Learn the fundamentals of machine learning, its types, and real-world applications. Explore how AI is transforming industries like healthcare, finance, and e-commerce, and discover the future impact of machine learning in technology."</p>
-                        <a href="blog1.html" target="_blank">Read More</a> <!-- Added target="_blank" -->
+                        <a href="blog1.html" target="_blank">Read More</a>
                     </div>
                 </div>
-                
-                <!-- Example Blog Post 2 -->
+    
+                <!-- Blog Post 2 -->
                 <div class="blog-item" data-aos="fade-up" data-aos-duration="1500">
                     <img src="blog2.jpeg" alt="Blog Image">
                     <div class="blog-content">
                         <h2>"Supervised Learning: A Complete Guide to Algorithms, Applications, and Best Practices"</h2>
                         <p>Explore the world of supervised learning, a key machine learning technique. Learn about its algorithms, types (regression and classification), real-world applications, and how to implement it effectively for high-performance models.</p>
-                        <a href="blog2.html" target="_blank">Read More</a> <!-- Added target="_blank" -->
+                        <a href="blog2.html" target="_blank">Read More</a>
                     </div>
                 </div>
-
-                <!-- Additional Blog Posts can be added here -->
+    
+                <!-- Blog Post 3 -->
                 <div class="blog-item" data-aos="fade-up" data-aos-duration="1500">
                     <img src="blog3.jpeg" alt="Blog Image">
                     <div class="blog-content">
                         <h2>"Unsupervised Learning: Uncovering Hidden Patterns in Data for AI Innovation"</h2>
                         <p>Explore the power of unsupervised learning in machine learning, where algorithms reveal hidden patterns and structures in unlabeled data. Learn how this technique drives innovation across industries like healthcare, customer segmentation, and anomaly detection, with a deep dive into the latest advancements in clustering, dimensionality reduction, and deep learning applications.</p>
-                        <a href="blog3.html" target="_blank">Read More</a> <!-- Added target="_blank" -->
+                        <a href="blog3.html" target="_blank">Read More</a>
                     </div>
                 </div>
+    
+                <!-- Additional Blog Post (Hidden initially) -->
+                <div class="blog-item hidden" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="blog3.jpeg" alt="Blog Image">
+                    <div class="blog-content">
+                        <h2>"Mastering Reinforcement Learning: The Key to Smarter AI Systems"</h2>
+                        <p>Dive into the world of reinforcement learning, a cutting-edge branch of machine learning. Discover its principles, real-world applications, and how it's revolutionizing industries with intelligent decision-making systems.</p>
+                        <a href="blog4.html" target="_blank">Read More</a>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- Pagination or Load More Button -->
@@ -128,6 +138,39 @@
             <!-- <button class="load-more">Load More</button> -->
         </div>
     </section>
+    <div class="view-more-container">
+        <button id="view-more-btn" class="view-more-btn">View More Blogs</button>
+    </div>
+    
+    
+</div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hiddenBlogs = document.querySelectorAll('.blog-item.hidden');
+    const viewMoreBtn = document.getElementById('view-more-btn'); // Corrected ID selector
+
+    // Initially hide additional blog items
+    hiddenBlogs.forEach(blog => (blog.style.display = 'none'));
+
+    viewMoreBtn.addEventListener('click', () => {
+        // Check if the blogs are currently visible
+        const areBlogsVisible = Array.from(hiddenBlogs).every(blog => blog.style.display === 'block');
+
+        // Toggle visibility and button text
+        if (areBlogsVisible) {
+            hiddenBlogs.forEach(blog => (blog.style.display = 'none'));
+            viewMoreBtn.textContent = 'View More Blogs';
+        } else {
+            hiddenBlogs.forEach(blog => (blog.style.display = 'block'));
+            viewMoreBtn.textContent = 'View Less Blogs';
+        }
+    });
+});
+
+    </script>
+    
 
     <section id="skills">
         <h1>My Skills</h1>
